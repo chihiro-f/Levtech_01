@@ -9,10 +9,18 @@
     <body>
         <h1>Blog Name</h1>
         <div class='posts'>
+            @foreach($posts as $post)
             <div class='post'>
-                <h2 class='title'>Title</h2>
-                <p class='body'>This is a sample body.</p>
+                <h2 class='title'>
+                    <!--Title-->
+                    {{ $post->title }}
+                </h2>
+                <p class='body'>
+                    <!--This is a sample body.-->
+                    {{ $post->body }}
+                </p>
             </div>
+            @endforeach
         </div>
     </body>
 </html>
