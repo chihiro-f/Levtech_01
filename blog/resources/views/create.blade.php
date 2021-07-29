@@ -17,13 +17,15 @@
       <div class="BlogTitle">
         <p>Title</p>
         <!-- タイトル入力 -->
-        <input type ="text" name="post[title]" placeholder="タイトルを入力" required/>
+        <input type ="text" name="post[title]" placeholder="タイトルを入力"/>
+        <p class = "title_error" style="color:red">{{ $errors->first('post.title') }}</p>
       </div>
 
       <!-- 内容の入力 -->
       <div class="BlogContent">
         <p>Body</p>
-        <textarea name="post[body]" placeholder="ブログの内容を入力"  required></textarea>
+        <textarea name="post[body]" placeholder="ブログの内容を入力"></textarea>
+        <p class = "body_error" style="color:red">{{ $errors->first('post.body') }}</p>
       </div>
       <input type="submit" value="保存"/>
       
