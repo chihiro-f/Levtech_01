@@ -17,3 +17,4 @@ Route::get('/posts/{post}/edit','PostController@edit');
 Route::get('/posts/{post}', 'PostController@show');
 Route::post('/posts', 'PostController@store');
 Route::put('/posts/{post}','PostController@update');
+
