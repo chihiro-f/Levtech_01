@@ -5,12 +5,14 @@ namespace App;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Post extends Model{
     
     use SoftDeletes;
     //SQLがUPDATE文になり、deleted_atに実行日時が設定される
     
     protected $fillable = [
+
         'title',
         'body',
     ];
